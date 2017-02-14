@@ -19,7 +19,8 @@
         <constructor-arg ref="fortuneService"/>
     </bean>
 
-    <bean id="cricketCoach" scope="prototype" class="edu.tomerbu.CricketCoach">
+    <bean init-method="init" destroy-method="cleanup" id="cricketCoach" scope="prototype" class="edu.tomerbu.CricketCoach">
+
         <property name="fortuneService" ref="fortuneService"/>
         <property name="email" value="${co.email}"/>
         <property name="team" value="${co.team}"/>

@@ -1,8 +1,14 @@
 package edu.tomerbu;
 
 public class CricketCoach implements Coach {
+    public void init() {
+        System.out.println("LifeCycleOnCreateMethod");
+    }
 
+    public void cleanup(){
+        System.out.println("LifeCycleOnDestroyMethod");
 
+    }
     private FortuneService fortuneService;
     private String email;
 
@@ -12,7 +18,7 @@ public class CricketCoach implements Coach {
                 "fortuneService=" + fortuneService +
                 ", email='" + email + '\'' +
                 ", team='" + team + '\'' +
-                "}@" +Integer.toHexString(hashCode());
+                "}@" + Integer.toHexString(hashCode());
     }
 
     private String team;
