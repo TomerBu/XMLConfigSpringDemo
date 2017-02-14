@@ -17,6 +17,8 @@
 
     <bean id="cricketCoach" class="edu.tomerbu.CricketCoach">
         <property name="fortuneService" ref="fortuneService"/>
+        <property name="email" value="Tomer.bu@gmail.com"/>
+        <property name="team" value="College Training!"/>
     </bean>
 
 
