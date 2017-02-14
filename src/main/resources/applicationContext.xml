@@ -7,14 +7,17 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="fortune" class="edu.tomerbu.HappyFortuneService"/>
+    <bean id="fortuneService" class="edu.tomerbu.HappyFortuneService"/>
 
     <bean id="myCoach"
           class="edu.tomerbu.TrackCoach">
-        <constructor-arg ref="fortune"/>
         <!-- set up constructor injection -->
+        <constructor-arg ref="fortuneService"/>
     </bean>
 
+    <bean id="cricketCoach" class="edu.tomerbu.CricketCoach">
+        <property name="fortuneService" ref="fortuneService"/>
+    </bean>
 
 
 </beans>
