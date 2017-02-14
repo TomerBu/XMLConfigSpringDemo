@@ -17,8 +17,11 @@ public class CricketCoach implements Coach {
 
     private String team;
 
-    public CricketCoach() {
+    static int counter = 0;
 
+    public CricketCoach() {
+        counter++;
+        System.out.println("Inside constructor " + counter);
     }
 
     public String getDailyWorkout() {

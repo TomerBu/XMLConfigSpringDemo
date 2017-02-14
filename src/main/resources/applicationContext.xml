@@ -9,15 +9,17 @@
 
     <!--Load the properties file sport.properties-->
     <context:property-placeholder location="sport.properties"/>
+
+
     <bean id="fortuneService" class="edu.tomerbu.HappyFortuneService"/>
 
     <bean id="myCoach"
-          class="edu.tomerbu.TrackCoach">
+          class="edu.tomerbu.TrackCoach" >
         <!-- set up constructor injection -->
         <constructor-arg ref="fortuneService"/>
     </bean>
 
-    <bean id="cricketCoach" class="edu.tomerbu.CricketCoach">
+    <bean id="cricketCoach" scope="prototype" class="edu.tomerbu.CricketCoach">
         <property name="fortuneService" ref="fortuneService"/>
         <property name="email" value="${co.email}"/>
         <property name="team" value="${co.team}"/>
