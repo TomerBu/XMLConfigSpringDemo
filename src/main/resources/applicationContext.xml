@@ -10,7 +10,7 @@
     <bean id="fortune" class="edu.tomerbu.HappyFortuneService"/>
 
     <bean id="myCoach"
-          class="edu.tomerbu.BaseballCoach">
+          class="edu.tomerbu.TrackCoach">
         <constructor-arg ref="fortune"/>
         <!-- set up constructor injection -->
     </bean>

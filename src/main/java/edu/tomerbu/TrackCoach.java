@@ -24,7 +24,7 @@ public class TrackCoach implements Coach {
     }
 
     public String getFortune() {
-        return fortuneService.getFortune();
+        return String.format("Just Do It: %s", fortuneService.getFortune());
     }
 }
 
