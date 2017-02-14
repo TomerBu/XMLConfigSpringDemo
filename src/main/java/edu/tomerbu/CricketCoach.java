@@ -12,7 +12,7 @@ public class CricketCoach implements Coach {
                 "fortuneService=" + fortuneService +
                 ", email='" + email + '\'' +
                 ", team='" + team + '\'' +
-                '}';
+                "}@" +Integer.toHexString(hashCode());
     }
 
     private String team;

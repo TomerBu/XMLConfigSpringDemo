@@ -18,7 +18,18 @@ public class HelloSpringApp {
         //call methods on the bean:
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(theCoach.getFortune());
+
+
+        //Hash Comparison for identity:
+        System.out.println("\n\nFirst coach:");
+        System.out.println(Integer.toHexString(System.identityHashCode(theCoach)));
         System.out.println(theCoach);
+
+        System.out.println("\n\nOther coach:");
+        //Hash Comparison for identity:
+        System.out.println(Integer.toHexString(System.identityHashCode(protoCoach)));
+        System.out.println(protoCoach);
+
 
         //cleanup:
         context.close();
